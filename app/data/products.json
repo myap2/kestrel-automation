@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ridgeline-2p",
+    "name": "Ridgeline 2P Tent",
+    "category": "Shelter",
+    "price": 289,
+    "sku": "KES-TENT-2P",
+    "weight": "3.4 lb",
+    "image": "/images/tent.jpg",
+    "featured": true,
+    "blurb": "Two-person, three-season shelter with a quiet vestibule for wet gear.",
+    "description": "A freestanding two-person tent with a full-coverage fly, dual doors, and a vestibule that actually fits muddy boots. DAC poles, taped seams, and a footprint-friendly rectangular floor."
+  },
+  {
+    "id": "summit-down-jacket",
+    "name": "Summit Down Jacket",
+    "category": "Apparel",
+    "price": 240,
+    "sku": "KES-JKT-DWN",
+    "weight": "14 oz",
+    "image": "/images/jacket.jpg",
+    "featured": true,
+    "blurb": "800-fill down, baffled through the core, with a helmet-friendly hood.",
+    "description": "Built for alpine starts and windy ridgelines. 800-fill responsible down, a durable water-repellent shell, and a hood that still cinches over a beanie."
+  },
+  {
+    "id": "granite-trail-boots",
+    "name": "Granite Trail Boots",
+    "category": "Footwear",
+    "price": 188,
+    "sku": "KES-BOOT-GT",
+    "weight": "2.1 lb / pair",
+    "image": "/images/boots.jpg",
+    "featured": true,
+    "blurb": "Leather and suede hikers with a sticky outsole for wet granite.",
+    "description": "Full-grain leather uppers, a padded collar, and a lug pattern that bites into wet rock. Break them in on a weekend loop; they are ready for week-long miles."
+  },
+  {
+    "id": "daybreak-28l",
+    "name": "Daybreak 28L Pack",
+    "category": "Packs",
+    "price": 149,
+    "sku": "KES-PACK-28",
+    "weight": "1.8 lb",
+    "image": "/images/pack.jpg",
+    "featured": false,
+    "blurb": "A daypack with a stiff sheet, ice-axe loop, and a lid that does not flop.",
+    "description": "Twenty-eight liters of honest volume, a foam back panel, and side pockets that hold a bottle you can actually grab while walking."
+  },
+  {
+    "id": "ember-camp-stove",
+    "name": "Ember Camp Stove",
+    "category": "Camp Kitchen",
+    "price": 79,
+    "sku": "KES-STV-EMB",
+    "weight": "11 oz",
+    "image": "/images/stove.jpg",
+    "featured": false,
+    "blurb": "Folding canister stove with a wide pot support and a fine simmer.",
+    "description": "Piezo ignition, a pressure regulator for cold mornings, and pot supports that do not fold under a full kettle."
+  },
+  {
+    "id": "quartz-1l-bottle",
+    "name": "Quartz 1L Bottle",
+    "category": "Hydration",
+    "price": 34,
+    "sku": "KES-BTL-1L",
+    "weight": "12 oz",
+    "image": "/images/bottle.jpg",
+    "featured": false,
+    "blurb": "Double-wall steel that keeps a spring cold through a long afternoon.",
+    "description": "One liter, a leak-proof cap, and a powder-coated body that does not scream when it hits granite."
+  },
+  {
+    "id": "nightfall-headlamp",
+    "name": "Nightfall Headlamp",
+    "category": "Lighting",
+    "price": 48,
+    "sku": "KES-LAMP-NF",
+    "weight": "3.2 oz",
+    "image": "/images/headlamp.jpg",
+    "featured": false,
+    "blurb": "Three hundred lumens, a red night mode, and a lockout switch.",
+    "description": "USB-C rechargeable, IPX4, and a beam that throws far enough to pick a cairn without blinding your partner."
+  },
+  {
+    "id": "merino-base-layer",
+    "name": "Merino Base Layer",
+    "category": "Apparel",
+    "price": 72,
+    "sku": "KES-BASE-MR",
+    "weight": "6 oz",
+    "image": "/images/merino.jpg",
+    "featured": false,
+    "blurb": "150-weight merino that layers under a shell without itching.",
+    "description": "A set-in sleeve, a slightly longer back hem, and merino that still smells like nothing after a two-day push."
+  }
+]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register · Kestrel Outfitters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="register">
+  <div data-chrome></div>
+  <div class="wrap page-hero">
+    <p class="eyebrow">Account</p>
+    <h1>Create an account</h1>
+  </div>
+  <div class="wrap" style="padding-bottom: 72px;">
+    <form class="form" data-testid="register-form">
+      <label>Full name <input name="name" data-testid="register-name" required></label>
+      <label>Email <input type="email" name="email" data-testid="register-email" required></label>
+      <label>Password <input type="password" name="password" data-testid="register-password" minlength="8" required></label>
+      <button class="btn" type="submit" data-testid="register-submit">Create account</button>
+      <div class="flash" data-testid="flash" role="status"></div>
+    </form>
+  </div>
+  <div data-footer></div>
+  <script type="module" src="/js/kestrel.js"></script>
+  <script type="module" src="/js/auth.js"></script>
+</body>
+</html>

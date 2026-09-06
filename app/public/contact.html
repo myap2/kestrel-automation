@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Kestrel Outfitters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="contact">
+  <div data-chrome></div>
+  <div class="wrap page-hero">
+    <p class="eyebrow">Shop desk</p>
+    <h1>Write the floor</h1>
+  </div>
+  <div class="wrap" style="padding-bottom: 72px;">
+    <form class="form" data-testid="contact-form">
+      <label>Name <input name="name" data-testid="contact-name" required></label>
+      <label>Email <input type="email" name="email" data-testid="contact-email" required></label>
+      <label>Topic
+        <select name="topic" data-testid="contact-topic">
+          <option>General</option>
+          <option>Order</option>
+          <option>Repairs</option>
+          <option>Fit advice</option>
+        </select>
+      </label>
+      <label>Message <textarea name="message" data-testid="contact-message" required></textarea></label>
+      <button class="btn" type="submit" data-testid="contact-submit">Send message</button>
+      <div class="flash" data-testid="flash" role="status"></div>
+      <p class="note">Reference: <span data-testid="contact-reference">—</span></p>
+    </form>
+  </div>
+  <div data-footer></div>
+  <script type="module" src="/js/kestrel.js"></script>
+  <script type="module" src="/js/contact.js"></script>
+</body>
+</html>

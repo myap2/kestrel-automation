@@ -1,0 +1,6 @@
+docs/** linguist-documentation
+app/public/images/** linguist-vendored
+*.jpg linguist-vendored
+*.jpeg linguist-vendored
+*.png linguist-vendored
+*.webp linguist-vendored

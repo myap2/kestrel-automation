@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order confirmed · Kestrel Outfitters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="order">
+  <div data-chrome></div>
+  <div class="wrap page-hero">
+    <p class="eyebrow">Confirmed</p>
+    <h1 data-testid="order-heading">Packed and on the list</h1>
+    <p>Order <strong data-testid="order-id"></strong></p>
+    <p class="note">We will ship from the Portland floor. Total charged: <span data-testid="order-total"></span></p>
+    <p><a class="btn" href="/shop.html">Back to the shop</a></p>
+  </div>
+  <div data-footer></div>
+  <script type="module" src="/js/kestrel.js"></script>
+  <script type="module">
+    const params = new URLSearchParams(location.search);
+    document.querySelector("[data-testid='order-id']").textContent = params.get("id") || "unknown";
+    const total = Number(params.get("total") || 0);
+    document.querySelector("[data-testid='order-total']").textContent = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(total);
+  </script>
+</body>
+</html>

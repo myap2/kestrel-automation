@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop · Kestrel Outfitters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="shop">
+  <div data-chrome></div>
+  <div class="wrap page-hero">
+    <p class="eyebrow">Catalog</p>
+    <h1>The floor</h1>
+    <p class="note" data-testid="result-count">Loading</p>
+  </div>
+  <div class="wrap toolbar">
+    <input class="field" type="search" placeholder="Search tents, boots, stoves…" data-testid="search-input" aria-label="Search products">
+    <div class="chips" data-testid="category-chips"></div>
+    <select class="select" data-testid="sort-select" aria-label="Sort products">
+      <option value="featured">Featured</option>
+      <option value="price-asc">Price, low to high</option>
+      <option value="price-desc">Price, high to low</option>
+      <option value="name">Name</option>
+    </select>
+  </div>
+  <div class="wrap" style="padding-bottom: 72px;">
+    <div class="flash" data-testid="flash" role="status"></div>
+    <div class="product-grid" data-testid="product-grid"></div>
+  </div>
+  <div data-footer></div>
+  <script type="module" src="/js/kestrel.js"></script>
+  <script type="module" src="/js/shop.js"></script>
+</body>
+</html>

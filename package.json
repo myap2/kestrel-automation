@@ -1,0 +1,11 @@
+{
+  "name": "kestrel-automation",
+  "private": true,
+  "description": "SDET portfolio: Playwright, Cypress, and C# Selenium against a local storefront",
+  "scripts": {
+    "app": "node app/server.js",
+    "test:playwright": "npm --prefix playwright test",
+    "test:cypress": "CI=1 npm --prefix cypress run cy:run",
+    "test:selenium": "dotnet test selenium-csharp/Kestrel.Automation.sln --nologo"
+  }
+}

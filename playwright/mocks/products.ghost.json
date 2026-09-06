@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": "ghost-quilt",
+      "name": "Ghost Quilt",
+      "category": "Sleep",
+      "price": 199,
+      "sku": "MOCK-1",
+      "weight": "1 lb",
+      "image": "/images/merino.jpg",
+      "featured": true,
+      "blurb": "A quilt served from a Playwright route mock.",
+      "description": "Not in the live catalog."
+    }
+  ]
+}

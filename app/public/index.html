@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kestrel Outfitters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="home">
+  <div data-chrome></div>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Portland · Est. 2019</p>
+      <h1>Gear that earns the miles.</h1>
+      <p>Quiet tents, sticky boots, and layers that still smell like nothing on day three. Packed in the Pearl, shipped wherever the trailhead is.</p>
+      <p>
+        <a class="btn" href="/shop.html" data-testid="hero-shop">Shop the catalog</a>
+        <a class="btn btn-ghost" href="/contact.html">Ask the shop</a>
+      </p>
+    </div>
+    <div class="hero-media">
+      <img src="/images/hero.jpg" alt="Alpine ridgeline at first light">
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Featured</p>
+          <h2>On the floor this week</h2>
+        </div>
+        <a class="btn btn-ghost" href="/shop.html">All gear</a>
+      </div>
+      <div class="product-grid" data-testid="featured-grid"></div>
+    </div>
+  </section>
+  <div data-footer></div>
+  <script type="module" src="/js/kestrel.js"></script>
+  <script type="module" src="/js/home.js"></script>
+</body>
+</html>

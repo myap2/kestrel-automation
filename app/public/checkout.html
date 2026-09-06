@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout · Kestrel Outfitters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body data-page="checkout">
+  <div data-chrome></div>
+  <div class="wrap page-hero">
+    <p class="eyebrow">Checkout</p>
+    <h1>Ship it home</h1>
+  </div>
+  <div class="wrap split">
+    <form class="form wide" data-testid="checkout-form">
+      <label>Full name <input name="name" data-testid="checkout-name" required></label>
+      <label>Email <input type="email" name="email" data-testid="checkout-email" required></label>
+      <label>Street address <input name="address" data-testid="checkout-address" required></label>
+      <div class="form-row">
+        <label>City <input name="city" data-testid="checkout-city" required></label>
+        <label>State <input name="region" data-testid="checkout-region" required></label>
+      </div>
+      <label>Postal code <input name="postal" data-testid="checkout-postal" required></label>
+      <button class="btn" type="submit" data-testid="place-order">Place order</button>
+      <div class="flash" data-testid="flash" role="status"></div>
+    </form>
+    <aside class="summary">
+      <p class="eyebrow">Order</p>
+      <div data-testid="checkout-summary"></div>
+    </aside>
+  </div>
+  <div data-footer></div>
+  <script type="module" src="/js/kestrel.js"></script>
+  <script type="module" src="/js/checkout.js"></script>
+</body>
+</html>
