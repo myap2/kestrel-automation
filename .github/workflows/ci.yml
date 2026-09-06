@@ -44,13 +44,15 @@ jobs:
           cache-dependency-path: cypress/package-lock.json
       - run: npm ci
         working-directory: cypress
-      - run: node app/server.js &
-      - run: npx --yes wait-on http://127.0.0.1:3000/api/health
-      - run: npx cypress run
+      - name: Run Cypress
         working-directory: cypress
         env:
           CI: true
           BASE_URL: http://127.0.0.1:3000
+        run: |
+          node ../app/server.js &
+          npx --yes wait-on http://127.0.0.1:3000/api/health
+          npx cypress run
 
   selenium:
     name: Selenium / C#
@@ -61,8 +63,10 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - uses: browser-actions/setup-chrome@v1
-      - run: node app/server.js &
-      - run: npx --yes wait-on http://127.0.0.1:3000/api/health
-      - run: dotnet test selenium-csharp/Kestrel.Automation.sln --nologo
+      - name: Run Selenium
         env:
           BASE_URL: http://127.0.0.1:3000
+        run: |
+          node app/server.js &
+          npx --yes wait-on http://127.0.0.1:3000/api/health
+          dotnet test selenium-csharp/Kestrel.Automation.sln --nologo
