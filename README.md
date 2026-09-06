@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/myap2/kestrel-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/myap2/kestrel-automation/actions/workflows/ci.yml)
 
-SDET portfolio: **Playwright**, **Cypress**, and **C# / Selenium 4** covering the same journeys against a local storefront I control.
+Public UI automation work: **Playwright**, **Cypress**, and **C# / Selenium 4** covering the same journeys against a local storefront I control.
 
 The shop is a fixture, not a third-party website. That is the point. Catalog, accounts, and APIs are deterministic, tagged with `data-testid`, and safe to run in CI. A recruiter can clone this, start the app, and watch every suite pass.
 
