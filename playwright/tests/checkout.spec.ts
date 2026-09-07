@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
+import { AccountPage } from "../pages/AccountPage";
 import { ProductPage } from "../pages/ProductPage";
 import { CartPage } from "../pages/CartPage";
 import { CheckoutPage } from "../pages/CheckoutPage";
@@ -8,8 +9,10 @@ import { accounts } from "../fixtures/accounts";
 test.describe("Cart and checkout", () => {
   test("adds a tent and places an order", async ({ page }) => {
     const login = new LoginPage(page);
-    await login.goto("/checkout.html");
+    const account = new AccountPage(page);
+    await login.goto();
     await login.signIn(accounts.standard.email, accounts.standard.password);
+    await expect(account.name).toHaveText(accounts.standard.name);
 
     const product = new ProductPage(page);
     await product.goto("ridgeline-2p");
