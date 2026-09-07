@@ -16,6 +16,7 @@ jobs:
   playwright:
     name: Playwright
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -35,6 +36,7 @@ jobs:
   cypress:
     name: Cypress
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -50,13 +52,22 @@ jobs:
           CI: true
           BASE_URL: http://127.0.0.1:3000
         run: |
-          node ../app/server.js &
-          npx --yes wait-on http://127.0.0.1:3000/api/health
-          npx cypress run
+          node ../app/server.js > /tmp/kestrel.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3000/api/health >/dev/null; then
+              npx cypress run
+              exit $?
+            fi
+            sleep 1
+          done
+          echo "Shop did not become ready"
+          cat /tmp/kestrel.log
+          exit 1
 
   selenium:
     name: Selenium / C#
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
@@ -67,6 +78,14 @@ jobs:
         env:
           BASE_URL: http://127.0.0.1:3000
         run: |
-          node app/server.js &
-          npx --yes wait-on http://127.0.0.1:3000/api/health
-          dotnet test selenium-csharp/Kestrel.Automation.sln --nologo
+          node app/server.js > /tmp/kestrel.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3000/api/health >/dev/null; then
+              dotnet test selenium-csharp/Kestrel.Automation.sln --nologo
+              exit $?
+            fi
+            sleep 1
+          done
+          echo "Shop did not become ready"
+          cat /tmp/kestrel.log
+          exit 1
